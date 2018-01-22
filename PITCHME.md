@@ -79,7 +79,7 @@ Null Propagation operator natively provides an operator `?.` which allows to han
 
 ## Idea
 
-The idea is not new - the null propogation first appeared in C# 6.0 in October 2014 and it was great improvement in laguage, as construction such following:
+The idea is not new - the null propogation first appeared in C# 6.0 in October 2014:
 
 ```c#
   double minPrice = 0;
@@ -115,7 +115,7 @@ The null propagation operator, or The Optional Chaining operator, as it said in 
 
 ## How it works? 🤔
 
-If the operand at the left-hand side of the `?.` operator evaluates to undefined or null, the expression evaluates to undefined. This concept is called _short-circuiting_ Otherwise the targeted property access, method or function call is triggered normally.
+If the operand at the left-hand side of the `?.` operator evaluates to undefined or null, the expression evaluates to undefined. This concept is called _short-circuiting_. Otherwise the targeted property access, method or function call is triggered normally.
 
 ---
 @title[Basic examples]
@@ -146,8 +146,8 @@ Since short-circuiting, when triggered, skips not only the current property acce
   const x = a === null ? undefined : a.b[3].c === null ? undefined : a.b[3].c(x).d
 ```
 
-@[1][Null propagation operator example]
-@[3][Desugaring]
+@[1](Null propagation operator example)
+@[3](Desugaring)
 
 ---
 @title[Try it by yourself]
@@ -170,10 +170,6 @@ In `.babelrc`:
 
 ## Todo
 
-* [x] Identify champion to advance addition (stage-1)
-* [x] Prose outlining the problem or need and general shape of the solution (stage-1)
-* [x] Illustrative examples of usage (stage-1)
-* [x] High-level API (stage-1)
 * [x] [Initial spec text](https://tc39.github.io/proposal-optional-chaining/) (stage-2)
 * [x] [Babel plugin](https://github.com/babel/babel/pull/5813) (stage-2)
 * [ ] Finalize and reviewer signoff for spec text (stage-3)
